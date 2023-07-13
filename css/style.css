@@ -1,0 +1,1266 @@
+*{ margin: 0; padding: 0;}
+img,fieldset{ border: none;}
+ul,ol{ margin: 0; padding: 0;}
+:focus{ outline: none;}
+.form-control:focus {
+	outline: 0;
+	box-shadow:none !important;
+}
+a:hover{ text-decoration: none !important;}
+sup{ color:#f00;}
+body{ font-size:16px; line-height: 20px;  font-family: 'museo_sans_rounded300';}
+.green-color{ color:#00B156;}
+.form-outer{width: 100%; display: flex; min-height: 100vh;}
+
+.form-outer .left-box {
+	width:50%;
+	position: relative;
+	background: url(../images/Mask1.jpg) no-repeat 0 0;
+	background-size: cover; background-position: center bottom;
+}
+.form-outer .left-box img{width:100%;}
+.form-outer .left-box:before{ position:absolute; left: 0; top: 0; width: 100%; height: 100%; background:rgba(8,10,24,0.8); content: "";}
+.form-outer .right-box {
+	width: 50%;
+	padding: 40px 40px 0 40px;
+}
+.form-outer .right-box form {
+	width: 100%;
+	position: relative;
+	top: -10px;
+}
+.form-outer .right-box form .otp-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.form-outer .right-box form .otp-box span {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-outer .right-box form .otp-box .icon-box {
+	margin: 0 0 20px 0;
+	width: 90px;
+	height: 90px;
+	background: #00b156;
+	color: #fff;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	border-color: rgba(223,225,229,0);
+}
+.form-outer .right-box .fill-otp {
+	display: flex;
+	justify-content: center;
+}
+.form-outer .right-box .fill-otp input[type="text"] {
+	max-width: 60px;
+	height: 50px;
+	text-align: center; margin: 0 10px; background:#edf8f7;
+}
+.form-outer .right-box form .otp-box .icon-box i{ font-size:35px; color: #fff;}
+
+
+
+
+.form-outer .right-box form fieldset {
+	border: 1px solid #ced4da;
+	padding: 40px;
+	position: relative;
+	border-radius: 10px;
+}
+.left-box .text-box{position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%);}
+.left-box .text-box h3 {
+	color: #fff;
+	font-size: 40px;
+	line-height: 45px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+	padding-bottom:30px;
+}
+.left-box .text-box h3::before {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	width: 150px;
+	height: 2px;
+	background: #fff;
+	content: "";
+	margin-left: -75px;
+}
+
+.form-outer .right-box form h4 {
+	/* text-align: center; */
+	color: #fff;
+	font-size: 20px;
+	line-height: 35px;
+	font-family: 'museo_sans_rounded500';
+	position: absolute;
+	top: -23px;
+	background: #00b156;
+	padding: 5px 20px;
+	text-transform: uppercase; 
+}
+/*.form-outer .right-box form h4::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-top: 22px solid #05a051;
+	border-right: 20px solid transparent;
+	transform: rotate(-180deg);
+}
+
+
+.form-outer .right-box form h4::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -21px;
+	width: 0;
+	height: 0;
+	border-top: 22px solid #05a051;
+	border-right: 22px solid transparent;
+	transform: rotate(-90deg);
+
+}*/
+
+.form-outer .right-box form span {
+	color: #505050;
+	font-size: 15px;
+	line-height: 18px;
+	font-family: 'museo_sans_rounded500';
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.form-outer .right-box form .form-group label {
+	font-size: 14px;
+	line-height: 18px;
+	color: #212529;
+	margin-bottom: 3px;
+	text-transform: capitalize;
+	font-family: 'museo_sans_rounded500';
+}
+.form-outer .right-box form .form-group .input-row {
+	display: inline-flex;
+	width: 100%;
+	position: relative;
+	padding-left: 45px;
+    background: #edf8f7;
+}
+
+.form-outer .right-box form .form-group .input-row .input-icon {
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 40px;
+	height: 100%;
+	background: #00b156;
+	border-radius: 3px 0 0 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-outer .right-box form .form-group .input-row .input-icon i{ color: #fff;}
+.form-outer .right-box form .form-group .input-row input[type="text"], .form-outer .right-box form .form-group .input-row input[type="email"], .form-outer .right-box form .form-group .input-row input[type="password"] {
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+	color: #495057;
+	border: 0;
+	width: 100%;
+	background: #edf8f7;
+	height: 20px;
+}
+
+.form-outer .right-box form .common-btn {
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	background: #00b156;
+	color: #fff;
+	font-size: 18px;
+	line-height: 20px;
+	font-family: 'museo_sans_rounded500';
+	border: 0;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 0 auto;
+    text-transform: uppercase;
+    -webkit-transition: all 0.8s; -ms-transition: all 0.8s; transition: all 0.8s; 
+	display: block;
+}
+
+.form-outer .right-box form .common-btn:hover{ background: #0075c9;}
+
+
+.common-btn.signup, .common-btn.login, .common-btn.continue, .common-btn.save {
+	margin: 20px 0 10px !important;
+}
+.form-outer .right-box form .login-here {
+	margin: 0;
+	font-size: 16px;
+	text-align: center;
+}
+.form-outer .right-box form .login-here a{ color: #00b156; -webkit-transition: all 0.8s; -ms-transition: all 0.8s; transition: all 0.8s; font-family: 'museo_sans_rounded500';}
+.form-outer .right-box form .login-here a:hover{ color: #0075c9; text-decoration: none;}
+.form-group.last{ margin-bottom: 0;}
+.forgot-password{ color: #505050; -webkit-transition: all 0.8s; -ms-transition: all 0.8s; transition: all 0.8s; }
+.forgot-password:hover{ color: #0075c9; text-decoration: none;}
+
+
+.resend-code{ color: #00b156; -webkit-transition: all 0.8s; -ms-transition: all 0.8s; transition: all 0.8s; }
+.resend-code:hover{ color: #0075c9; text-decoration: none;}
+
+
+/*******************Home Page********************/
+header{ position: relative; z-index: 99;}
+header .dropdown .dropdown-menu.show {
+	right:0 !important;
+	left: auto !important;
+	background: rgba(255,255,255,1) !important;
+	border-color: #fff;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+header .dropdown .dropdown-menu.show span {
+	padding: 8px 15px !important;
+	width: 100%;
+	display: inline-block;
+}
+header .dropdown .dropdown-menu.show a {
+	padding: 5px 10px !important;
+	text-align: left;
+	padding: 8px 15px !important;
+}
+
+header .dropdown .dropdown-menu.show a:hover {
+	background: #00B156;
+	color: #fff;
+}
+#dropdownMenuButton {
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 8px 15px;
+}
+#dropdownMenuButton::after{top: 8px;
+    position: relative;
+    font-size: 25px;}
+
+#dropdownMenuButton:focus {outline: none; box-shadow: none;}
+header .inner{
+	display: flex !important;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+header .logo {
+	max-width: 216px;
+	display: block;
+}
+header .logo img{ max-width:100%;}
+.home-banner {
+	width: 100%;
+	position: relative;
+	margin-top: -85px;
+	padding-top:90px;
+}
+.home-banner::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "";
+	width: 1000px;
+	height: 500px;
+	background: url(../images/corner-crv.png) no-repeat right top;
+	z-index: -1;
+	background-size: 555px;
+}
+
+.home-banner .left-text .sub-heading {
+	display: inline-block;
+	width: 100%;
+	color: #000;
+	font-size: 30px;
+	line-height: 35px;
+	text-transform: uppercase;
+	position: relative;
+	font-family: 'museo_sans_rounded500';
+	margin-bottom: 30px;
+}
+.home-banner .left-text .sub-heading::before {
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	content: "";
+	width: 100px;
+	height: 2px;
+	background: #000;
+}
+
+
+.home-banner .left-text {height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;}
+
+.home-banner .left-text h2 {
+	color: #00B156;
+	font-size: 60px;
+	line-height: 65px;
+	text-transform: capitalize;
+	font-family: 'museo_sans_rounded700';
+	margin-bottom: 25px;
+}
+.home-banner .left-text h2 span{ color: #0075c9;}
+.home-banner .right-graphics{ text-align: right;}
+.home-banner .right-graphics .circle-img{ max-width:380px;}
+
+.appointment-container,.common-container {
+	width: 100%;
+	padding: 70px 0;
+}
+.appointment-container .top-cols{width:100%; display: flex;}
+.appointment-container .appointment-box {
+	border: 1px solid #CAE2F4;
+	width: 100%;
+	border-radius: 20px;
+	padding: 70px 20px 20px 20px;
+	position: relative;
+	-webkit-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+	position: relative;
+	text-align: center;
+	min-height:255px;
+}
+
+.appointment-container .appointment-box:hover{ border-color:#00B156;}
+
+
+.appointment-container .appointment-box ul{ list-style: none;}
+.appointment-container .appointment-box ul li {
+	font-size:17px;
+	line-height: 22px;
+	color: #000;
+	font-family: 'museo_sans_rounded500';
+	display: flex;
+	align-items: center;
+	/* text-align: center; */
+	justify-content: center;
+}
+.appointment-container .appointment-box ul li a {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	background: #fff;
+	padding: 20px;
+	border-radius: 100%;
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	border-color: rgba(223,225,229,0);
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -50px;
+	top: -50px;
+}
+.appointment-container .appointment-box ul li a img {
+	max-width: 50px;
+	margin-right: 0;
+}
+
+.appointment-container .appointment-box p {
+	font-size: 14px;
+	line-height: 20px;
+	color: #000;
+	font-family: 'museo_sans_rounded500';
+	min-height: 60px;
+}
+
+.appointment-container .appointment-box .next-arrow {
+	background: #cae2f4;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	-webkit-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+.appointment-container .appointment-box .next-arrow:hover{ background:#00B156;}
+.appointment-container .appointment-box .next-arrow:hover i{ color:#fff;}
+
+.appointment-container .appointment-box .next-arrow i {
+	font-size:20px;
+	line-height: 35px;
+}
+
+.appointment-container .container {
+	display: flex;
+	justify-content: space-between; flex-wrap: wrap;
+}
+
+.appointment-container .view-appointment {
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+.appointment-box.full {
+	width: 100%;
+	padding: 30px;
+	border: 1px solid #CAE2F4;
+	display: flex;
+	justify-content: space-between;
+}
+
+.appointment-container .view-appointment h5{
+	font-size: 26px;
+	line-height: 28px;
+	color: #000;
+	font-family: 'museo_sans_rounded500'; margin-bottom: 10px;
+}
+
+.view-appointment .appointment-data{ border: 0; margin: 0; padding: 0;}
+.view-appointment .appointment-data tr td {
+	padding: 5px;
+	text-align: left;
+}
+.appointment-container .view-appointment ul.btn-set {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 220px;
+	width: 100%;
+}
+
+.appointment-container .view-appointment ul.btn-set li {
+	width: 100%;
+	margin: 10px 0;
+}
+.fill-btn {
+	width: 100%;
+	background: #00B156;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	line-height: 22px;
+	border: 0;
+	border-radius: 10px;
+    -webkit-transition: all 0.8s; -ms-transition: all 0.8s; transition: all 0.8s;
+	border: 1px solid transparent;
+}
+
+.fill-btn:hover{ background: #0075c9; text-decoration: none; color:#fff !important;}
+.preview{ background:#0075c9 !important;}
+.preview:hover{ background: #808080!important;}
+.cancel {
+	background: #fff !important;
+	border-color: #f00;
+	color: #f00 !important;
+}
+.cancel:hover{ background:#f00 !important; color: #fff !important;}
+.edit{ background:#808080 !important;}
+.edit:hover{ background:#3d3d3d !important;}
+
+
+
+
+.border-btn {
+	width: 100%;
+	border: 1px solid #00B156 !important;
+	padding: 10px;
+	text-align: center;
+	color: #00B156;
+	font-size: 20px;
+	line-height: 22px;
+	border: 0;
+	border-radius: 10px;
+	-webkit-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+	background: #fff !important;
+}
+.tanks span {
+	color: #00B156 !important;
+	margin-bottom: 5px !important;
+}
+.tanks a.login{ color: #00B156;} 
+.tanks a.login:hover{ color: #0175CA; text-decoration: none;} 
+
+
+
+
+.border-btn:hover{ border:1px solid #0075c9 !important; color:#0075c9; text-decoration: none;}
+.bottom-container {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 70px;
+}
+.bottom-container h4{display: inline-block;
+    width: 100%;
+    color: #0175CA;
+    font-size:46px;
+    line-height:50px;
+    position: relative;
+    font-family: 'museo_sans_rounded700';
+    margin-bottom: 40px;}
+
+    .bottom-container h4::before {
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        content: "";
+        width: 260px;
+        height: 2px;
+        margin-left: -130px;
+        background: #999999;
+    }
+
+    footer {
+        background: #0175CA;
+        padding: 20px;
+    }
+    footer ul {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    footer ul li {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        padding: 0 10px;
+        position: relative;
+    }
+    footer ul li::before {
+        left: 0;
+        top: 2px;
+        content: "";
+        position: absolute;
+        background: #fff;
+        height: 100%;
+        width: 1px;
+    }
+    footer ul li a{color: #fff; -webkit-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s; position: relative; top:0}
+    footer ul li a:hover{color: #fff; text-decoration: none; top:-10px; }
+
+    footer ul li::before {
+        left: 0;
+        top: 2px;
+        content: "";
+        position: absolute;
+        background: #fff;
+        height: 100%;
+        width: 1px;
+    }
+    footer ul li:first-child:before{ content: none;}
+
+
+
+	.appointment-form{width:100%;}
+	.appointment-form header{background:#000;}
+
+
+	.common-inner-page{width:100%;}
+	.common-inner-page header{background:#000;}
+
+	.form-banner, .common-banner {
+		width: 100%;
+		text-align: center;
+		background: url(../images/form-banner.jpg) no-repeat top center;
+		background-size: cover;
+		background-position: bottom;
+	}
+	.form-banner h3, .common-banner h3{ margin:0; font-size:48px; line-height: 52px; color:#fff; font-family: 'museo_sans_rounded500';}
+	.form-banner .container, .common-banner .container {
+		display: flex;
+		min-height: 260px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.appointment-form-container, .common-main-container {
+		width: 100%;
+		padding: 75px 0;
+	}
+	
+	.appointment-form-container form h4 {
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 10px;
+		color: #0175ca;
+		font-family: 'museo_sans_rounded500';
+		margin-top: 30px;
+	}
+	.appointment-form-container form label{ font-size:16px; line-height:18px; margin-bottom:10px; font-family: 'museo_sans_rounded500';}
+	.appointment-form-container form label small {color: #787676; font-weight: normal;}
+	.appointment-form-container .upload-box{height: auto; padding: 25px;}
+	.upload-box .inner-box {
+		min-width: 600px;
+		margin: 0 auto;
+		border: 1px dashed #c2c2c2;
+		border-radius: 10px;
+		min-height: 160px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 20px;
+	}
+	.upload-box span {
+		text-align: center;
+		display: inline-block;
+		width: 100%;
+		min-height: 30px;
+		top: -5px;
+	}
+	.upload-box span.upload-icon {
+		background: #fff;
+		box-shadow: 0 1px 6px rgba(32,33,36,.28);
+		border-color: rgba(223,225,229,0);
+		width: 120px;
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		margin-bottom: 15px;
+	}
+.upload-icon img{ max-width: 60px;}
+.mid{display: flex;
+	max-width: 100px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	position: relative;}
+
+	.mid::after {
+		border-bottom: 2px dashed #000;
+		width: 100%;
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 13px;
+	}
+	.mid small {
+		background: #edf8f7;
+		padding: 5px 5px;
+		color: #000;
+		font-size: 16px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.img-thumb {
+		max-height: 75px;
+		border: 2px solid none;
+		 border-radius:3px;
+		padding: 1px;
+		cursor: pointer;
+	  }
+	  .img-thumb-wrapper {
+		display: inline-block;
+		margin: 10px 10px 0 0;
+	  }
+	  .remove {
+		display: block;
+		background: #444;
+		border: 1px solid none;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+	  }
+	  .remove:hover {
+		background: white;
+		color: black;
+	  }
+
+	.upload-btn-wrapper {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+	  }
+	  
+	  .upload-btn-wrapper .btn {
+		border: 0;
+		background-color: #00B156;
+		padding: 8px 20px;
+		border-radius: 8px;
+		font-weight:400;
+		color: #fff;
+		font-size: 18px;
+	}
+	.upload-btn-wrapper input[type="file"] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		width: 130px;
+		height: 43px;
+		padding: 0;
+	}
+
+
+
+	.appointment-form-container form label sup{ color: #f00;}
+	.form-group .form-check-inline label{ margin:0 !important;}
+	.appointment-form-container textarea{ min-height:120px; resize: none;}
+	.appointment-form-container .form-control{background: #edf8f7;}
+	.appointment-form-container select{ cursor: pointer;}
+	.btn-group {
+		display: flex !important;
+		justify-content: center;
+		margin: 50px 0 0 0 !important;
+	}
+	.btn-group .fill-btn {
+		max-width: 150px;
+		text-transform: uppercase;
+		margin: 0 5px;
+	}
+
+	.appointment-form-container .checkbox{ display: flex; align-items: self-start;}
+	.appointment-form-container .checkbox input[type="checkbox"] {margin:6px 10px 0 0;}
+	.appointment-form-container form label p {
+		margin: 0;
+		font-family: 'museo_sans_rounded500';
+		line-height: 25px;
+	}
+	.appointment-form-container form fieldset {
+		border: 1px solid #ced4da;
+		padding: 40px;
+		position: relative;
+		border-radius: 10px;
+	}
+
+	.appointment-form-container form fieldset > h4 {
+		color: #fff;
+		font-size: 20px;
+		line-height: 35px;
+		font-family: 'museo_sans_rounded500';
+		position: absolute;
+		top: -23px;
+		background: #00b156;
+		padding: 5px 20px;
+		text-transform: uppercase; margin: 0;
+	}
+	/*.appointment-form-container form fieldset > h4::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -20px;
+		width: 0;
+		height: 0;
+		border-top: 22px solid #05a051;
+		border-right: 20px solid transparent;
+		transform: rotate(-180deg);
+	}
+	.appointment-form-container form fieldset > h4::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -21px;
+		width: 0;
+		height: 0;
+		border-top: 22px solid #05a051;
+		border-right: 22px solid transparent;
+		transform: rotate(-90deg);
+	}*/
+	.product-type option span{ float: right;}
+/**************Custom Checkbox*******************/
+  .chk_box {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .chk_box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  
+  .chk_box:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .chk_box input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+ 
+  .chk_box input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .chk_box .checkmark::after {
+    left: 9px;
+    top: 4px;
+    width: 7px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #datetimepicker1 .input-group-text{ background: #00B156;}
+  #datetimepicker1 .input-group-text i{ color: #fff;}
+  #datetimepicker1 .input-group-text svg{ color: #fff;}
+  .preview-data {width: 100% !important; border: 1px solid #dee2e6; margin-top: 30px;}
+  .preview-data tr td:first-child {font-weight: 600; border-right: 1px solid #dee2e6;}
+  .note {
+	font-size: 14px;
+	line-height: 20px;
+	display: inline-block;
+	margin: 8px 0;
+}
+
+	
+.upload-box .profile-wrapper{ display: flex;}
+.case-history .inner-box {
+	width: 100%;
+	border: 1px solid #ced4da;
+	position: relative;
+}
+.case-history .inner-box .sub-head {
+	background: #00b156;
+	color: #fff;
+	position: absolute;
+	left: 20px;
+	top: -18px;
+	position: absolute;
+	padding: 7px 15px;
+	min-width: 130px;
+}
+.case-history .inner-box table{width:100%;}
+.case-history .inner-box table tr td, .case-history .inner-box table tr th {padding:8px 10px; vertical-align: top; font-size: 14px;}
+.case-history .inner-box table tr th {
+	background: #e8f3ff;
+	padding: 15px 10px;
+}
+
+.case-history .inner-box .download-action{ text-align: center;}
+.case-history .inner-box .download-action a{ margin:0 auto;}
+.case-history .inner-box .download-action a i {
+	width: 32px;
+	height: 32px;
+	background: #00B156;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+}
+
+
+.case-history .inner-box table tr td.download-1 {
+	background: #CFEFDF;
+	padding: 0;
+	border-radius: 0 0 0 15px;
+}
+.case-history .inner-box table tr td.download-2{ background:#CAE1F2; padding:0; border-radius: 0 0 15px 0;}
+.case-history .inner-box table tr td.download-1 a {
+	color: #000;
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	padding: 8px 25px;
+}
+.case-history .inner-box table tr td.download-1 a:hover{ background:#AADEC4; border-radius: 0 0 0 15px;}
+.case-history .inner-box table tr td.download-2 a:hover{ background:#B6D7EF; border-radius: 0 0 15px 0;}
+.case-history .inner-box table tr td.download-2 a {
+	color: #000;
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	padding: 8px 25px;
+}
+	
+.profile-box .inner-box {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.profile-box .inner-box table {
+	width: 100%;
+	border: 0;
+	background: #F8FAFD;
+	margin-bottom: 30px;
+}
+.profile-box .inner-box table tr{width:100%; border-bottom: 1px dashed #ced4da;}
+.profile-box .inner-box table tr td {
+	padding:10px 20px;
+}
+
+.profile-box .inner-box table tr th {
+	width: 100%;
+	background: #2fa6e4;
+	color: #fff;
+	font-weight: 400 !important;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
+	font-size: 20px;
+}
+
+.profile-box .inner-box table tr td a i {
+	color: #fff;
+	background: #00B156;
+	padding: 8px;
+	border-radius: 5px;
+}
+.profile-box .inner-box table tr td.edit-icon {
+	width: 100%;
+	float: right;
+	text-align: right;
+}
+.profile-box .inner-box table tr:last-child{ border-bottom:0;}
+
+.profile-box .inner-box table.card-box .inner-card {
+	width: 100%;
+	border: 1px solid #2fa6e4;
+	border-radius: 10px;
+	padding: 20px;
+	position: relative;
+	margin: 30px 0;
+}
+
+.profile-box .inner-box table.card-box .inner-card ul {
+	margin: 20px 0 0 0;
+	list-style: none;
+	width: 100%;
+}
+
+.profile-box .inner-box table.card-box .inner-card ul li {
+	width: 100%;
+	position: relative;
+	padding-left: 45px;
+	margin-bottom: 20px;
+}
+.profile-box .inner-box table.card-box .inner-card ul li:last-child{ margin-bottom:0;}
+
+.profile-box .inner-box table.card-box .inner-card ul li .icon {
+	position: absolute;
+	left: 0;
+	top: -5px;
+	font-size: 30px;
+}
+.profile-box .inner-box table.card-box .inner-card ul li .icon.pin {
+	font-size: 43px;
+	color: #fe0114;
+}
+.profile-box .inner-box table.card-box .inner-card ul li b {
+	width: 100%;
+	display: inline-block;
+}
+.profile-box .inner-box table.card-box .inner-card .top-head {
+	position: absolute;
+	left: 20px;
+	top: -20px;
+	background: #00B156;
+	color: #fff;
+	padding: 7px 25px;
+	max-width: 170px;
+	width: 100%;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.sp-acc-otp .sp-acc-otp{ margin:0 auto !important;}
+
+#SP-OTP .modal-dialog form fieldset {
+	border: 1px solid #ced4da;
+	padding: 40px;
+	position: relative;
+	border-radius: 10px;
+	background: #fff;
+}
+
+#SP-OTP .modal-dialog .modal-content{ border:0; border-radius: 10px;}
+#SP-OTP .modal-dialog .modal-content .modal-body{padding:0;}
+
+#SP-OTP .modal-dialog .modal-content .close {
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	background: #f00;
+	opacity: 1;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	z-index: 1;
+}
+#SP-OTP .modal-dialog .modal-content .close:focus{outline:none;}
+#SP-OTP .modal-dialog .modal-content .close span{ text-shadow:none; top: -2px; position:relative;}
+
+
+
+#SP-OTP .modal-dialog .modal-content form h4 {
+	color: #fff;
+	font-size: 20px;
+	line-height: 35px;
+	font-family: 'museo_sans_rounded500';
+	position: absolute;
+	top: -23px;
+	background: #00b156;
+	padding: 5px 20px;
+	text-transform: uppercase;
+}
+
+/*#SP-OTP .modal-dialog .modal-content form h4::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-top: 22px solid #05a051;
+	border-right: 20px solid transparent;
+	transform: rotate(-180deg);
+}
+
+#SP-OTP .modal-dialog .modal-content form h4::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -21px;
+	width: 0;
+	height: 0;
+	border-top: 22px solid #05a051;
+	border-right: 22px solid transparent;
+	transform: rotate(-90deg);
+}*/
+
+#SP-OTP .modal-dialog .modal-content form .otp-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#SP-OTP .modal-dialog .modal-content form .otp-box .icon-box {
+	margin: 0 0 20px 0;
+	width: 90px;
+	height: 90px;
+	background: #00b156;
+	color: #fff;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 1px 6px rgba(32,33,36,.28);
+	border-color: rgba(223,225,229,0);
+}
+
+#SP-OTP .modal-dialog .modal-content form .otp-box .icon-box i {
+	font-size: 35px;
+	color: #fff;
+}
+
+#SP-OTP .modal-dialog .modal-content form .otp-box span {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#SP-OTP .modal-dialog .modal-content form .fill-otp {
+	display: flex;
+	justify-content: center;
+}
+
+#SP-OTP .modal-dialog .modal-content form .fill-otp input[type="text"] {
+	max-width: 60px;
+	height: 50px;
+	text-align: center;
+	margin: 0 10px;
+	background: #edf8f7;
+}
+
+#SP-OTP .modal-dialog .modal-content form .common-btn {
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	background: #00b156;
+	color: #fff;
+	font-size: 18px;
+	line-height: 20px;
+	font-family: 'museo_sans_rounded500';
+	border: 0;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 0 auto;
+	text-transform: uppercase;
+	-webkit-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+	display: block;
+}
+
+#SP-OTP .modal-dialog .modal-content form .common-btn:hover {
+	background: #0075c9;
+}
+#SP-OTP .modal-dialog .modal-content .show-msg{ padding:50px 0; display: none;}
+#SP-OTP .modal-dialog .modal-content .show-msg span {
+	font-weight: 600;
+	color: #00b156;
+}
+
+
+
+.create-case form label sup{ color: #f00;}
+	.form-group .form-check-inline label{ margin:0 !important;}
+	.create-case textarea{ min-height:120px; resize: none;}
+	.create-case .form-control{background: #edf8f7;}
+	.create-case select{ cursor: pointer;}
+	.create-case .checkbox{ display: flex; align-items: self-start;}
+	.create-case .checkbox input[type="checkbox"] {margin:6px 10px 0 0;}
+	.create-case form label p {
+		margin: 0;
+		font-family: 'museo_sans_rounded500';
+		line-height: 25px;
+	}
+	.create-case form fieldset {
+		border: 1px solid #ced4da;
+		padding: 40px;
+		position: relative;
+		border-radius: 10px;
+	}
+
+	.create-case form fieldset > h4 {
+		color: #fff;
+		font-size: 20px;
+		line-height: 35px;
+		font-family: 'museo_sans_rounded500';
+		position: absolute;
+		top: -23px;
+		background: #00b156;
+		padding: 5px 20px;
+		text-transform: uppercase; margin: 0;
+	}
+
+	.appointment-form-container .prod-list {
+		width: 100%;
+		background: #edf8f7;
+		border: 1px solid #ced4da;
+		border-radius: 5px;
+		padding: 10px 0;
+	}
+	.appointment-form-container .prod-list table{width:100%;}
+
+	.appointment-form-container .prod-list tr th {
+		font-size: 16px;
+		line-height: 18px;
+		margin-bottom: 10px;
+		font-family: 'museo_sans_rounded500';
+		font-weight: 500;
+		padding-bottom: 6px;
+	}
+
+	.appointment-form-container .prod-list tr th, .appointment-form-container .prod-list tr td {
+		padding: 5px 12px;
+
+	}
+	.appointment-form-container .prod-list tr td .QTY {
+		background: #fff;
+		border-radius: 5px;
+		padding: 5px;
+		width: 50px;
+		height: 45px;
+		border: 0;
+		text-align: center;
+	}
+
+
+	.timeSlot {
+
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.timeSlot ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	
+	.timeSlot ul li {
+		width: 120px;
+		height: 40px;
+		border: #444 solid 1px;
+		border-radius: 5px;
+		background: #ffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 4px 2px 0;
+		font-size: 14px;
+
+	}
+
+	.timeactive {
+		background: #00B156 !important;
+		border: #00B156 solid 1px !important;
+		color: #fff;
+	}
